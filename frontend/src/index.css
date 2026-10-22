@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-200;
+  }
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+/* Accessibility Modes */
+html.font-size-large {
+  font-size: 112%;
+}
+
+html.font-size-xl {
+  font-size: 125%;
+}
+
+html.dyslexic-font-mode * {
+  font-family: 'Comic Sans MS', 'Trebuchet MS', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.75 !important;
+}
+
+html.high-contrast-mode {
+  filter: contrast(125%);
+}
+
+html.high-contrast-mode * {
+  border-color: #000 !important;
+}
+
+.dark html.high-contrast-mode * {
+  border-color: #fff !important;
+}
+
+html.reduced-motion-mode * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}

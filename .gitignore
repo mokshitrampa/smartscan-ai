@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Production Builds
+frontend/dist/
+dist/
+
+# Environment Variables
+.env
+.env.local
+backend/.env
+
+# Database & Local Uploads
+*.db
+backend/*.db
+backend/smartscan.db
+backend/uploads/
+uploads/
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
